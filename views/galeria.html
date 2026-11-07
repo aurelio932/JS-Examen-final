@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Galería | Sabor &amp; Sal Catering</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+
+<body>
+<!--Creamos la cabecera con el logotipo y la barra de Nav fija-->
+    <header>
+    <a class="logo" href="../index.html">Sabor <span>&amp;</span> Sal Cathering</a>
+    <nav aria-label="Principal"><ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="galeria.html" aria-current="page">Galería</a></li>
+        <li><a href="presupuesto.html">Presupuesto</a></li>
+        <li><a href="contacto.html">Contacto</a></li></ul></nav>
+</header>
+<!--Creamos una sección para la galería de imágenes-->
+<main>
+    <section>
+        <h1>Galería</h1>
+        <h2>Nuestros platos y montajes</h2>
+        <div id="filtros" class="filtros"></div>
+        <div id="galeria" class="galeria"></div>
+        <dialog id="visor"><img id="visor-img" src="../galeria/foto1.svg" alt=""><button type="button" id="cerrar">Cerrar</button></dialog>
+    </section>
+</main>
+
+<!--Pie de página: el cual se encontrara en todas las páginas en ello encontraremos: redes sociales, dirección y aviso legal -->
+
+<footer>
+    <p>
+        <a href="https://www.instagram.com/"><img src="../galeria/instagram.svg" alt="Instagram"></a>
+        <a href="https://www.facebook.com/"><img src="../galeria/facebook.svg" alt="Facebook"></a>
+        <a href="https://www.x.com/"><img src="../galeria/x.svg" alt="X"></a>
+    </p>
+    <address>Sabor &amp; Sal Catering · Gran Vía vieja de Lezama 25, 48011 Bilbao · 944 000 000</address>
+    <details><summary>Aviso legal</summary><p>Sitio ficticio creado con fines educativos. Los datos mostrados no son reales y no se almacena información personal.</p></details>
+    <p>© 2026 Sabor &amp; Sal Catering. Todos los derechos reservados.</p>
+</footer>
+<script src="../js/galeria.js"></script>
+</body>
+</html>

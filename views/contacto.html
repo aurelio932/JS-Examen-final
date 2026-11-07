@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Sabor &amp; Sal Cathering</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css">
+</head>
+<body>
+<!--Creamos la cabecera con el logotipo y la barra de Nav fija-->
+    <header>
+        <a class="logo" href="../index.html">Sabor &amp; Sal Cathering</a>
+        <nav aria-label="Principal"><ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="presupuesto.html">Presupuesto</a></li>
+            <li><a href="contacto.html" aria-current="page">Contacto</a></li></ul></nav>
+
+    </header>
+
+<!---Creamos el contenido principal con la información de contacto como es el ubicacion en dirreccion y mapa-->
+    <main> 
+        <section>
+            <h1>Contacto</h1>
+            <h2>Donde estamos</h2>
+            <address>
+                <br>Sabor &amp; Sal Catering<br>Gran Vía vieja de Lezama 25, 48011 Bilbao<br>944 000 000<br>correo: hola@saborysal.es
+            </address>
+            <p>Horario de atención: Lunes a Viernes, 9:00 - 18:00</p>
+        </section>
+        <section>
+            <h2>Como llegar</h2>
+            <p><button type="button" id="calcular">Calcular ruta desde mi ubicación</button></p>
+            <p id="msg"></p>
+            <div id="mapa" style="width: 100%; height: 400px;"></div>
+        </section>
+    </main>
+
+  <!--Pie de página: el cual se encontrara en todas las páginas en ello encontraremos: redes sociales, dirección y aviso legal -->
+
+    <footer>
+        <p>
+            <a href="https://www.instagram.com/"><img src="../galeria/instagram.svg" alt="Instagram"></a>
+            <a href="https://www.facebook.com/"><img src="../galeria/facebook.svg" alt="Facebook"></a>
+            <a href="https://www.x.com/"><img src="../galeria/x.svg" alt="X"></a>
+        </p>
+        <address>Sabor &amp; Sal Catering · Gran Vía vieja de Lezama 25, 48011 Bilbao · 944 000 000</address>
+        <details><summary>Aviso legal</summary><p>Sitio ficticio creado con fines educativos. Los datos mostrados no son reales y no se almacena información personal.</p></details>
+        <p>© 2026 Sabor &amp; Sal Catering. Todos los derechos reservados.</p>
+    </footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+<script src="../js/mapa.js"></script>
+
+</body>
+</html>

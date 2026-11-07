@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presupuesto | Sabor &amp; Sal Cathering</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+    <body>
+<!--Creamos la cabecera con el logotipo y la barra de Nav fija-->
+    <header>
+        <a class="logo" href="../index.html">Sabor &amp; Sal Cathering</a>
+        <nav aria-label="Principal"><ul><li><a href="../index.html">Inicio</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="presupuesto.html">Presupuesto</a></li>
+            <li><a href="contacto.html">Contacto</a></li></ul></nav>
+    </header>
+         <main>
+        <section>
+            <h1>Solicita tu presupuesto</h1>
+            <h2>Rellena el formulario</h2>
+            <form id="formulario" novalidate>
+                <!-- Campos del formulario con nombre, apellidos, email y teléfono -->
+                 <fieldset>
+                    <legend>Datos de contacto</legend>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" maxlength="15" 
+                    placeholder="Escribe tu nombre" autocomplete="given-name" required>
+                    <p class="error" id="error-nombre"></p>
+
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" id="apellidos" name="apellidos" maxlength="40" placeholder="Escribe tus apellidos" autocomplete="family-name" required>
+                    <p class="error" id="error-apellidos"></p>
+
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="Escribe tu correo electrónico" autocomplete="email" required>
+                    <p class="error" id="error-email"></p>
+                    
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Escribe tu número de teléfono" autocomplete="tel" required>
+                    <p class="error" id="error-telefono"></p> 
+                 </fieldset>
+
+                 <!--Creamos otro fieldset para los campos del formulario para que escoja los tipos de producto, ademas de extras y acepte las condiciones y envio -->
+                 <fieldset>
+                    <legend>Presupuesto</legend>
+                    <label for="producto">Elige el tipo de producto:</label>
+                    <select id="producto" name="producto" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="300">Coctel de bienvenida (300 €)</option>
+                        <option value="600">Banquete completo (600 €)</option>
+                        <option value="250">Brunch de empresa (250 €)</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                    <label  for="plazo">Plazo de entrega en días (5% desde 15, 10% desde 30, 15% desde 60)</label>
+                    <input type="number" id="plazo" name="plazo" min="1" max="365" placeholder="Días" required>
+                    <p>Eligue los Extras: </p>
+                    <div class="extras">
+                        <label><input type="checkbox" name="extras" value="80"> Camareros (50 €)</label>
+                        <label><input type="checkbox" name="extras" value="60"> Decoración floral (60 €)</label>
+                        <label><input type="checkbox" name="extras" value="50"> Vajilla premium (50 €)</label>
+                        <label><input type="checkbox" name="extras" value="120"> Barra libre (120 €)</label>
+                    </div>
+                    <p>Presupuesto estimado: <output id="producto_plazo">€ 0.00</output> €</p>
+                 </fieldset>
+                 <fieldset>
+                    <legend>Aceptacion de condiciones y envio</legend>
+                    <label><input type="checkbox" id="privacidad" name="privacidad" required> Acepto las condiciones del servicio</label>
+                    <p class="error" id="error-privacidad"></p>
+                    <button type="submit">Enviar</button>
+                    <button type="reset" class="sec">Borrar datos</button>
+                    <p id="Resultado"></p>
+                 </fieldset>
+            </form>
+        </section>
+         </main>
+
+        <!--Pie de página: el cual se encontrara en todas las páginas en ello encontraremos: redes sociales, dirección y aviso legal -->
+
+        <footer>
+            <p>
+                <a href="https://www.instagram.com/"><img src="../galeria/instagram.svg" alt="Instagram"></a>
+                <a href="https://www.facebook.com/"><img src="../galeria/facebook.svg" alt="Facebook"></a>
+                <a href="https://www.x.com/"><img src="../galeria/x.svg" alt="X"></a>
+            </p>
+            <address>Sabor &amp; Sal Catering · Gran Vía vieja de Lezama 25, 48011 Bilbao · 944 000 000</address>
+
+            <details><summary>Aviso legal</summary><p>Sitio ficticio creado con fines educativos. Los datos mostrados no son reales y no se almacena información personal.</p></details>
+             <p>© 2026 Sabor &amp; Sal Catering. Todos los derechos reservados.</p>
+
+        </footer>
+<script src="../js/presupuesto.js"></script>
+    </body>
+</html>

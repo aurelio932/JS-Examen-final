@@ -1,0 +1,242 @@
+:root {--rem: #6b1f3a; --aza:#f2b705; --gris:#f3f1f4}
+*{box-sizing:border-box}
+body{
+    margin:0;
+    font-family:system-ui, sans-serif;
+    color: #1a1a1a;
+    line-height: 1.6;
+    background-color: var(--gris);
+}
+h1,h2,h3{
+    font-family: georgia, "times new roman", serif;
+    line-height: 1.2;
+    color: var(--rem);
+}
+
+/* Cabecera y navegación fija */
+header{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+.logo{
+    font-family: georgia, "times new roman", serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--aza);
+    text-decoration: none;
+    width: 100px;
+    height: auto;
+}
+.logo span{
+    color: var(--aza);
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+nav a {
+    color: #ac3636;
+    text-decoration: none;
+    padding: 3rem;
+    border-radius: 5px 2px;
+}
+nav a:hover, nav a[aria-current="page"]{
+    border-bottom-color: var(--aza);
+    color: var(--aza);
+}
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible{
+    outline: 2px solid var(--aza);
+    outline-offset: 2px;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 0 1rem 5% 3rem;
+}
+
+.hero{
+    background-color: var(--rem);
+    color: #ffff;
+    padding: 4.5rem 2rem;
+    border-radius: 5px 40px 5px 40px;
+}
+
+.hero h1{
+    color: #ffff;
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin: 0 0 1rem;
+}
+
+.hero p {
+    max-width: 34rem;
+    font-size: 1.15rem;
+}
+.btn,button{
+    background-color: var(--aza);
+    color:black;
+    border: none;
+    border: 0;
+    padding: .7rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+button.sec{
+    background-color: var(--gris);
+    color: var(--rem);
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+.grid article, blockquote{
+    margin: 0;
+    padding: 1rem;
+    background-color: #ffff;
+    border-left: 5px solid var(--rem);
+}
+.noticia small{color:#555}
+
+/* Formulario de contacto */
+fieldset{
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+legend{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--rem);
+    padding: 0 .4rem;
+}
+
+label {
+    display: block;
+    margin-bottom: .5rem;
+    font-weight: 600;
+}
+
+input, input[type="text"], input[type="email"], input[type="tel"], input[type="number"], select {
+    width: 100%;
+    max-width: 420px;
+    padding: .5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.extras label{
+    display: inline-block;
+    margin-right: 1.5rem;
+}
+
+.err{
+    color:#b00020;
+    font-size: .90rem;
+    min-height: 1.2rem;
+    margin: 0rem;
+}
+
+output{
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--rem);
+}
+
+#resultado{
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--rem);
+}
+
+/* Galería de imágenes */
+.filtros{
+    display: flex;
+    gap: 5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.filtros button.activo{
+    background-color: var(--gris);
+    color: var(--rem);
+}
+
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem
+
+}
+
+.galeria img{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    cursor: zoom-in;
+}
+
+dialog{
+    border: 0;
+    padding: 1rem;
+    max-width: 90vw;
+}
+dialog::backdrop{
+    background: rgba(0,0,0,.7);
+}
+
+dialog img {
+    max-width: 100%;
+    max-height: 70vh;
+    display: block;
+    margin-bottom: .8rem;
+}
+
+/* Mapa */
+
+#mapa{
+    height: 420px;
+    border-radius: 4px;
+}
+
+/* Footer de todas las páginas */
+
+footer{
+    background-color: #000;
+    color: #fff;
+    padding: 1.5rem 5%;
+    text-align: center;
+}
+
+footer a {
+    color: var(--aza);
+}
+
+footer img{
+    width: 30px;
+    height: 30px;
+    margin: 0 .4rem;
+}
+
+address{ 
+    font-style: normal;
+}
+
+@media(max-width:600px){nav ul{gap: 8rem; flex-wrap: wrap;}}
