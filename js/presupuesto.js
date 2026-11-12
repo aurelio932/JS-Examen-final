@@ -43,10 +43,15 @@ form.addEventListener('change', calcular);
 form.addEventListener('submit', evento => {
   evento.preventDefault();
   const datosValidos = Object.keys(reglas).every(id => validar(id));
-  const faltanDatos = !$('producto').value || Number($('plazo').value) < 1 || !$('privacidad').checked;
+  const faltaPresupuesto = !$('producto').value || Number($('plazo').value) < 1;
+  const faltaPrivacidad = !$('privacidad').checked;
+  const faltanDatos = faltaPresupuesto || faltaPrivacidad;
 
-  $('err-general').textContent = faltanDatos
-    ? 'Elige un producto, indica el plazo y acepta la política de privacidad.'
+  $('err-general').textContent = faltaPresupuesto
+    ? 'Elige un producto e indica el plazo de entrega.'
+    : '';
+  $('err-privacidad').textContent = faltaPrivacidad
+    ? 'Debes aceptar las condiciones del servicio.'
     : '';
   $('resultado').textContent = datosValidos && !faltanDatos
     ? 'Solicitud enviada. Te responderemos en 24 horas.'

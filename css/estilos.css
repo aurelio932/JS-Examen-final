@@ -209,6 +209,16 @@ dialog img {
     margin-bottom: .8rem;
 }
 
+dialog h3 {
+    margin: 0 0 .3rem;
+}
+
+dialog p {
+    margin: 0 0 .8rem;
+    max-width: 60ch;
+    line-height: 1.4;
+}
+
 /* Mapa */
 
 #mapa{

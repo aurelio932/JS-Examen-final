@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Presupuesto | Sabor &amp; Sal Cathering</title>
+    <title>Presupuesto | Sabor &amp; Sal Catering</title>
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
     <body>
 <!--Creamos la cabecera con el logotipo y la barra de Nav fija-->
     <header>
-        <a class="logo" href="../index.html">Sabor &amp; Sal Cathering</a>
+        <a class="logo" href="../index.html">Sabor &amp; Sal Catering</a>
         <nav aria-label="Principal"><ul><li><a href="../index.html">Inicio</a></li>
             <li><a href="galeria.html">Galería</a></li>
             <li><a href="presupuesto.html">Presupuesto</a></li>
@@ -26,19 +26,19 @@
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" name="nombre" maxlength="15" 
                     placeholder="Escribe tu nombre" autocomplete="given-name" required>
-                    <p class="error" id="error-nombre"></p>
+                    <p class="err" id="err-nombre"></p>
 
                     <label for="apellidos">Apellidos:</label>
                     <input type="text" id="apellidos" name="apellidos" maxlength="40" placeholder="Escribe tus apellidos" autocomplete="family-name" required>
-                    <p class="error" id="error-apellidos"></p>
+                    <p class="err" id="err-apellidos"></p>
 
                     <label for="email">Correo electrónico:</label>
                     <input type="email" id="email" name="email" placeholder="Escribe tu correo electrónico" autocomplete="email" required>
-                    <p class="error" id="error-email"></p>
+                    <p class="err" id="err-email"></p>
                     
                     <label for="telefono">Teléfono:</label>
                     <input type="tel" id="telefono" name="telefono" placeholder="Escribe tu número de teléfono" autocomplete="tel" required>
-                    <p class="error" id="error-telefono"></p> 
+                    <p class="err" id="err-telefono"></p> 
                  </fieldset>
 
                  <!--Creamos otro fieldset para los campos del formulario para que escoja los tipos de producto, ademas de extras y acepte las condiciones y envio -->
@@ -54,22 +54,23 @@
                     </select>
                     <label  for="plazo">Plazo de entrega en días (5% desde 15, 10% desde 30, 15% desde 60)</label>
                     <input type="number" id="plazo" name="plazo" min="1" max="365" placeholder="Días" required>
-                    <p>Eligue los Extras: </p>
+                    <p>Elige los extras:</p>
                     <div class="extras">
-                        <label><input type="checkbox" name="extras" value="80"> Camareros (50 €)</label>
-                        <label><input type="checkbox" name="extras" value="60"> Decoración floral (60 €)</label>
-                        <label><input type="checkbox" name="extras" value="50"> Vajilla premium (50 €)</label>
-                        <label><input type="checkbox" name="extras" value="120"> Barra libre (120 €)</label>
+                        <label><input type="checkbox" class="extra" name="extras" value="50"> Camareros (50 €)</label>
+                        <label><input type="checkbox" class="extra" name="extras" value="60"> Decoración floral (60 €)</label>
+                        <label><input type="checkbox" class="extra" name="extras" value="50"> Vajilla premium (50 €)</label>
+                        <label><input type="checkbox" class="extra" name="extras" value="120"> Barra libre (120 €)</label>
                     </div>
-                    <p>Presupuesto estimado: <output id="producto_plazo">€ 0.00</output> €</p>
+                    <p>Presupuesto estimado: <output id="total">0.00 €</output></p>
                  </fieldset>
                  <fieldset>
-                    <legend>Aceptacion de condiciones y envio</legend>
+                    <legend>Aceptación de condiciones y envío</legend>
                     <label><input type="checkbox" id="privacidad" name="privacidad" required> Acepto las condiciones del servicio</label>
-                    <p class="error" id="error-privacidad"></p>
+                    <p class="err" id="err-privacidad"></p>
                     <button type="submit">Enviar</button>
                     <button type="reset" class="sec">Borrar datos</button>
-                    <p id="Resultado"></p>
+                    <p class="err" id="err-general"></p>
+                    <p id="resultado"></p>
                  </fieldset>
             </form>
         </section>

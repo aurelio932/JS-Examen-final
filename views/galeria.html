@@ -24,7 +24,12 @@
         <h2>Nuestros platos y montajes</h2>
         <div id="filtros" class="filtros"></div>
         <div id="galeria" class="galeria"></div>
-        <dialog id="visor"><img id="visor-img" src="../galeria/foto1.svg" alt=""><button type="button" id="cerrar">Cerrar</button></dialog>
+        <dialog id="visor" aria-labelledby="visor-titulo">
+            <img id="visor-img" src="../galeria/foto1.svg" alt="">
+            <h3 id="visor-titulo"></h3>
+            <p id="visor-desc"></p>
+            <button type="button" id="cerrar">Cerrar</button>
+        </dialog>
     </section>
 </main>
 
